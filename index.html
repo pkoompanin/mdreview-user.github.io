@@ -84,11 +84,55 @@
       gap: 8px;
     }
 
-    .topbar-secondary {
-      margin-top: 8px;
-      padding-top: 8px;
+    .topbar-spacer {
+      flex: 1;
+    }
+
+    .data-menu {
+      position: absolute;
+      top: calc(100% + 4px);
+      right: 16px;
+      width: min(560px, calc(100% - 32px));
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 30;
+    }
+
+    .data-menu-section + .data-menu-section {
       border-top: 1px solid var(--border);
-      justify-content: space-between;
+      padding-top: 10px;
+    }
+
+    .data-menu-title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .data-menu-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    @media (max-width: 700px) {
+      .topbar {
+        position: relative;
+      }
+      .brand-title {
+        flex-basis: 100%;
+        font-size: 0.95rem;
+      }
     }
 
     .brand-title {
@@ -198,6 +242,34 @@
 
     .final-textarea {
       border-color: var(--fix);
+    }
+
+    .autogrow-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .autogrow {
+      overflow-y: auto;
+    }
+
+    .autogrow-toggle {
+      align-self: flex-end;
+      min-height: 40px;
+      padding: 4px 12px;
+      margin-top: 2px;
+      border: none;
+      background: transparent;
+      color: var(--primary);
+      font-size: 0.88rem;
+      font-family: inherit;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .autogrow-toggle[hidden] {
+      display: none;
     }
 
     .badge {

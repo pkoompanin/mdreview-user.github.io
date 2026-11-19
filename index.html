@@ -298,6 +298,66 @@
       border: 1px solid var(--ok);
     }
 
+    .revision-list {
+      list-style: none;
+      margin: 0 0 16px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .revision-list li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--surface-alt);
+    }
+
+    .revision-section {
+      margin: 12px 0 6px;
+      font-size: 0.95rem;
+    }
+
+    .revision-note {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    .revision-note input {
+      margin-top: 4px;
+    }
+
+    .revision-checks {
+      list-style: none;
+      margin: 0 0 8px;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+    }
+
+    .revision-checks .is-on {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .revision-checks .is-off {
+      color: var(--text-muted);
+    }
+
+    .revision-copy {
+      flex-shrink: 0;
+      min-height: 36px;
+      font-size: 0.85rem;
+    }
+
     .muted-caption,
     .backup-status-text {
       font-size: 0.85rem;

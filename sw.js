@@ -1,4 +1,4 @@
-const CACHE_NAME = "mdreview-pwa-v1.1.3";
+const CACHE_NAME = "mdreview-pwa-v1.1.4";
 const ASSETS = ["./", "./index.html", "./app.js", "./manifest.json", "./icon.svg"];
 
 self.addEventListener("install", (event) => {
